@@ -97,8 +97,8 @@ export const getUniRoutePath = async (url: string): Promise<string> => {
     if (index === arr.length - 1 || !val) return res
     return '../' + res
   }, '')
-  console.log('path', path)
-  console.log('toTop', toTop)
-  console.log('url', url)
+  // console.log('path:', path)
+  // console.log('toTop:', toTop)
+  // console.log('url:', url)
   return Promise.resolve((toTop + url).replace(/\/\//g, '/'))
 }
