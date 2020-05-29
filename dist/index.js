@@ -128,10 +128,11 @@ class Router {
             onLoad() {
                 if (this.$mp && this.$mp.page && this.$mp.page.route) {
                     const path = '/' + this.$mp.page.route;
+                    const query = this.$mp.query || {};
                     router.currentRoute = {
-                        query: this.$mp.query,
+                        query,
                         path,
-                        fullPath: joinQuery(path, this.$mp.query)
+                        fullPath: joinQuery(path, query)
                     };
                 }
                 if (router._platform)
@@ -141,10 +142,11 @@ class Router {
             onShow() {
                 if (this.$mp && this.$mp.page && this.$mp.page.route) {
                     const path = '/' + this.$mp.page.route;
+                    const query = this.$mp.query || {};
                     router.currentRoute = {
-                        query: this.$mp.query,
+                        query,
                         path,
-                        fullPath: joinQuery(path, this.$mp.query)
+                        fullPath: joinQuery(path, query)
                     };
                 }
             }
