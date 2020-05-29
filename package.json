@@ -1,0 +1,22 @@
+{
+  "name": "uni-router",
+  "version": "1.0.0",
+  "description": "一款类似 vue-router 的 uni-app 路由插件",
+  "main": "dist/index.js",
+  "repository": "https://github.com/wjtools/uni-router.git",
+  "homepage": "https://github.com/wjtools/uni-router",
+  "author": "Steven",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "buildx": "rm -rf dist && tsc",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}

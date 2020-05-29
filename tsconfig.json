@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "moduleResolution": "node",
+    "lib": ["ESNext", "DOM"],
+    "outDir": "./dist",
+    "strict": false,
+    "declaration": true,
+    "removeComments": true,
+    "experimentalDecorators": true
+  },
+  "include": ["src/**/*"]
+}
+
