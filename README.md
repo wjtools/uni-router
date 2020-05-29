@@ -31,7 +31,7 @@ yarn add @wjtools/uni-router
 
 ```js
 // main.js
-import router  from '@wjtools/uni-router'
+import router from '@wjtools/uni-router'
 
 Vue.use(router, {
   mode: 'strict', // loose 模式用 relaunch 跳转 tab 页，可以传参
