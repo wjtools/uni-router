@@ -1,6 +1,6 @@
 {
   "name": "@wjtools/uni-router",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "一款类似 vue-router 的 uni-app 路由插件",
   "main": "dist/index.js",
   "scripts": {
