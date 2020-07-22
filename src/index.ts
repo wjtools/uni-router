@@ -159,8 +159,9 @@ class Router {
 
   install(Vue, options) {
     const router = this
-    router.tabBars = options.tabBars || []
-    router.mode = options.mode || 'strict'
+    let { mode, tabBars = [] } = options || {}
+    router.mode = mode || 'strict'
+    router.tabBars = tabBars.map(path => path.startsWith('/') ? path : '/' + path)
 
     Object.defineProperty(Vue.prototype, '$Router', {
       get() {
