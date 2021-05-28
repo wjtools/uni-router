@@ -188,11 +188,12 @@ class Router {
 
       onLoad() {
         // 兼容百度小程序
-        if (this?.$mp?.page?.is) {
+        // if (this?.$mp?.page?.is) {
+        if (this.$mp && this.$mp.page && this.$mp.page.is) {
           this.$mp.page.route = this.$mp.page.is
         }
 
-        if (this?.$mp?.page?.route) {
+        if (this.$mp && this.$mp.page && this.$mp.page.route) {
           const path = '/' + this.$mp.page.route
           const query = this.$mp.query || {}
           router.currentRoute = {
@@ -208,11 +209,12 @@ class Router {
       // onShow 里面还需要重新赋值一次，用于页面回退的时候纠正
       onShow() {
         // 兼容百度小程序
-        if (this?.$mp?.page?.is) {
+        // if (this?.$mp?.page?.is) {
+        if (this.$mp && this.$mp.page && this.$mp.page.is) {
           this.$mp.page.route = this.$mp.page.is
         }
 
-        if (this?.$mp?.page?.route) {
+        if (this.$mp && this.$mp.page && this.$mp.page.route) {
           const path = '/' + this.$mp.page.route
           const query = this.$mp.query || {}
           router.currentRoute = {
