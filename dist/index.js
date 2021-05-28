@@ -127,7 +127,10 @@ class Router {
         });
         Vue.mixin({
             onLoad() {
-                if (this.$mp && this.$mp.page && this.$mp.page.route) {
+                if (this?.$mp?.page?.is) {
+                    this.$mp.page.route = this.$mp.page.is;
+                }
+                if (this?.$mp?.page?.route) {
                     const path = '/' + this.$mp.page.route;
                     const query = this.$mp.query || {};
                     router.currentRoute = {
